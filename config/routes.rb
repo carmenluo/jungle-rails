@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
+  #old fashion way: get '/' => 'products#index'
+  # or get '/' => {controller:'products', action: 'index'}
 
   # with only, /products will only route with /products and /products/:id(products#show), otherwise it will also have other CRUD actions
   resources :products, only: [:index, :show]
