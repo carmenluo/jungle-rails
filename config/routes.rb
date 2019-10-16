@@ -7,14 +7,14 @@ Rails.application.routes.draw do
   # with only, /products will only route with /products and /products/:id(products#show), otherwise it will also have other CRUD actions
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
-
+ 
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
   end
 
   resources :orders, only: [:create, :show]
-
+  resource :about, only: [:show]
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
