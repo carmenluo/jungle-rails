@@ -8,8 +8,10 @@
     <h4>Thank you for your order <%= @order.email %>!</h4>
   </div>
   <div>
-  <%= render 'line_item', line_items: @line_items %>
+    <%= render 'line_item', line_items: @line_items %>
   </div>
+    <div>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+</div>
 
 </section>
