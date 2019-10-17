@@ -1,0 +1,25 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Created Date</th>
+      <th>Updated Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= categories.each do |category| %>
+    <tr>
+      <td scope="row">
+        <%= category.name%>
+      </td>
+      <td>
+        <%= category.created_at%>
+      </td>
+      <td>
+        <%= category.updated_at%>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
