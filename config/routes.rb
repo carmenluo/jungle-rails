@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:create, :new, :edit, :index, :update]
-    resources :sales, only: [:index]
+    resources :sales, only: [:index, :new]
   end
   # Add user authentication for register and login
   # resources :users, only: [:new, :create]
