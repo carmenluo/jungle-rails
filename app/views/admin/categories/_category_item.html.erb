@@ -19,6 +19,11 @@
       <td>
         <%= category.updated_at%>
       </td>
+      <td>
+        <div class="btn btn-info" >
+        <%= link_to "Edit", edit_admin_category_path(category) %>
+        </div>
+      </td>
     </tr>
     <% end %>
   </tbody>
